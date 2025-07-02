@@ -38,7 +38,6 @@ INSERT INTO products (product_id, name, brand, category, price, rating) VALUES
 
 select * from products;
 
-
 INSERT INTO ingredients (ingredient_id, name, benefits, comedogenic_rating) VALUES
 (1, 'Niacinamide', 'Reduces pores, evens skin tone', 2),
 (2, 'Hyaluronic Acid', 'Deep hydration, plumps skin', 0),
@@ -142,53 +141,6 @@ INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (15, 17, 1),  -- Green Tea Mask
 (15, 12, 1);
 
--- Which skin types are ordering more anti-aging products?
-
-SELECT u.skin_type, COUNT(DISTINCT oi.order_id) AS total_orders
-FROM users u
-JOIN orders o ON u.user_id = o.user_id
-JOIN order_items oi ON o.order_id = oi.order_id
-JOIN anti_aging_products aap ON oi.product_id = aap.product_id
-GROUP BY u.skin_type
-ORDER BY total_orders DESC;
-
--- Which Anti-Aging Products Are Being Purchased Most Often?
-
-SELECT aap.product_name,
-    aap.brand,
-    COUNT(*) AS times_purchased
-FROM anti_aging_products aap
-JOIN order_items oi ON aap.product_id = oi.product_id
-GROUP BY aap.product_name, aap.brand
-ORDER BY times_purchased DESC
-LIMIT 5;
-
--- Does Price Correlate with Rating for Anti-Aging Products?
-
-SELECT DISTINCT 
-    product_name,
-    brand,
-    price,
-    rating
-FROM anti_aging_products
-ORDER BY rating DESC;
-
-SELECT 
-    ROUND(price, -2) AS price_range, 
-    ROUND(AVG(rating), 2) AS avg_rating,
-    COUNT(DISTINCT product_id) AS products_in_range
-FROM anti_aging_products
-GROUP BY ROUND(price, -2)
-ORDER BY price_range;
-
-SELECT 
-    FLOOR(price / 500) * 500 AS price_bucket,
-    ROUND(AVG(rating), 2) AS avg_rating,
-    COUNT(DISTINCT product_id) AS products_in_bucket
-FROM anti_aging_products
-GROUP BY price_bucket
-ORDER BY price_bucket;
-
 INSERT INTO products (product_id, name, brand, category, price, rating) VALUES
 (21, 'Retinol Youth Renewal Serum', 'Murad', 'serum', 1950, 4.8),
 (22, 'Collagen Boosting Night Cream', 'Olay', 'cream', 1350, 4.4),
@@ -232,8 +184,6 @@ INSERT INTO product_ingredients (product_id, ingredient_id) VALUES
 (34, 16),  -- Peptide Toner → Peptides
 (35, 16);  -- Eye Cream → Peptides
 
-
-
 select * from products;
 
 select * from ingredients;
@@ -256,7 +206,6 @@ WHERE name IS NULL AND benefits IS NULL AND comedogenic_rating IS NULL;
 
 SET SQL_SAFE_UPDATES = 0;
 
-
 SELECT ingredient_id, LENGTH(name), LENGTH(benefits), comedogenic_rating
 FROM ingredients
 WHERE name IS NULL OR name = '' OR benefits IS NULL OR benefits = '' OR comedogenic_rating IS NULL;
@@ -267,7 +216,6 @@ WHERE name IS NULL
    OR benefits IS NULL 
    OR benefits = ''
    OR comedogenic_rating IS NULL;
-
 
 SELECT * FROM ingredients WHERE name IS NULL OR name = '' OR benefits IS NULL OR benefits = '';
 
@@ -281,3 +229,91 @@ VALUES (13, 'Retinol', 'Anti-aging, smooths fine lines, reduces wrinkles', 1);
 
 INSERT INTO product_ingredients (product_id, ingredient_id)
 VALUES (21, 13);
+
+select * from orders;
+
+-- Orders from 2022
+INSERT INTO orders (order_id, user_id, order_date) VALUES
+(16, 1, '2022-02-15'),
+(17, 2, '2022-04-10'),
+(18, 3, '2022-06-25'),
+(19, 4, '2022-09-18'),
+(20, 5, '2022-12-01');
+
+-- Orders from 2023
+INSERT INTO orders (order_id, user_id, order_date) VALUES
+(21, 1, '2023-01-11'),
+(22, 2, '2023-03-22'),
+(23, 3, '2023-07-05'),
+(24, 4, '2023-10-16'),
+(25, 5, '2023-12-28');
+
+-- Orders from 2025
+INSERT INTO orders (order_id, user_id, order_date) VALUES
+(26, 1, '2025-01-10'),
+(27, 2, '2025-03-14'),
+(28, 3, '2025-05-20'),
+(29, 4, '2025-08-02'),
+(30, 5, '2025-11-09');
+
+select * from products;
+
+-- Order Items for Orders from 2022
+INSERT INTO order_items (order_id, product_id, quantity) VALUES
+(16, 3, 1),   -- Niacinamide + Zinc
+(16, 7, 1),   -- Hyaluronic Moisturizer
+
+(17, 13, 1),  -- 6 Peptide Serum
+(17, 28, 1),  -- Snail Ampoule
+
+(18, 5, 1),   -- AHA/BHA Peeling
+(18, 6, 1),   -- Rice Cleanser
+(18, 25, 1),  -- Bakuchiol Oil
+
+(19, 21, 1),  -- Retinol Youth Renewal Serum
+(19, 22, 1),  -- Collagen Cream
+
+(20, 10, 1),  -- Vitamin C Serum
+(20, 11, 1);  -- Snail Essence
+
+-- Order Items for Orders from 2023
+INSERT INTO order_items (order_id, product_id, quantity) VALUES
+(21, 27, 1),  -- Lifting Serum
+(21, 8, 1),   -- Oil-Free Acne Wash
+
+(22, 17, 1),  -- Green Tea Sheet Mask
+(22, 29, 1),  -- Laneige Sleeping Pack
+
+(23, 19, 1),  -- Red Wine Mask
+(23, 24, 1),  -- Retinol + Peptides Mask
+(23, 30, 1),  -- Age Rewind Peptide Cream
+
+(24, 1, 1),   -- Hydrating Cleanser
+(24, 14, 1),  -- Green Tea Emulsion
+
+(25, 32, 1),  -- Vitamin E + Retinol Oil
+(25, 20, 1);  -- Avocado Sheet Mask
+
+-- Order Items for Orders from 2025
+INSERT INTO order_items (order_id, product_id, quantity) VALUES
+(26, 2, 1),   -- Vitamin C Glow Serum
+(26, 9, 1),   -- UV Clear Sunscreen
+
+(27, 31, 1),  -- Peptide Night Serum
+(27, 33, 1),  -- Retinol Glow Serum
+
+(28, 12, 1),  -- Rice Toner
+(28, 34, 1),  -- Peptide Toner
+(28, 35, 1),  -- Eye Cream
+
+(29, 4, 1),   -- Gentle Skin Cleanser
+(29, 16, 1),  -- Aloe Sheet Mask
+
+(30, 15, 1),  -- Tea Tree Gel Cleanser
+(30, 18, 1);  -- Rice Sheet Mask
+
+select * from order_items;
+
+
+
+

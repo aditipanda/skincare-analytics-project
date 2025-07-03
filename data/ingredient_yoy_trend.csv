@@ -1,0 +1,63 @@
+ingredient_name,year,times_used,prev_year_usage,year_over_year_diff
+"Aloe Vera",2022,6,NULL,NULL
+"Aloe Vera",2023,4,6,-2
+"Aloe Vera",2024,7,4,3
+"Aloe Vera",2025,9,7,2
+"Avocado Extract",2022,1,NULL,NULL
+"Avocado Extract",2023,2,1,1
+"Avocado Extract",2024,2,2,0
+"Avocado Extract",2025,2,2,0
+Bakuchiol,2022,2,NULL,NULL
+Bakuchiol,2023,1,2,-1
+"Coenzyme Q10",2023,1,NULL,NULL
+"Coenzyme Q10",2024,1,1,0
+"Coenzyme Q10",2025,1,1,0
+Collagen,2022,2,NULL,NULL
+"Glycolic Acid",2022,2,NULL,NULL
+"Glycolic Acid",2024,2,2,0
+"Green Tea Extract",2023,5,NULL,NULL
+"Green Tea Extract",2024,3,5,-2
+"Green Tea Extract",2025,6,3,3
+"Hyaluronic Acid",2022,13,NULL,NULL
+"Hyaluronic Acid",2023,15,13,2
+"Hyaluronic Acid",2024,29,15,14
+"Hyaluronic Acid",2025,17,29,-12
+Niacinamide,2022,9,NULL,NULL
+Niacinamide,2023,6,9,-3
+Niacinamide,2024,17,6,11
+Niacinamide,2025,3,17,-14
+Peptides,2023,9,NULL,NULL
+Peptides,2024,7,9,-2
+Peptides,2025,4,7,-3
+"Red Wine Extract",2023,3,NULL,NULL
+"Red Wine Extract",2024,1,3,-2
+"Red Wine Extract",2025,1,1,0
+Retinol,2022,10,NULL,NULL
+Retinol,2023,14,10,4
+Retinol,2024,20,14,6
+Retinol,2025,5,20,-15
+"Rice Extract",2022,4,NULL,NULL
+"Rice Extract",2023,1,4,-3
+"Rice Extract",2024,5,1,4
+"Rice Extract",2025,4,5,-1
+"Salicylic Acid",2022,2,NULL,NULL
+"Salicylic Acid",2023,1,2,-1
+"Salicylic Acid",2024,3,1,2
+"Snail Mucin",2022,2,NULL,NULL
+"Snail Mucin",2022,1,NULL,NULL
+"Snail Mucin",2023,2,2,0
+"Snail Mucin",2023,2,1,1
+"Snail Mucin",2024,3,2,1
+"Snail Mucin",2024,1,2,-1
+"Tea Tree Oil",2023,2,NULL,NULL
+"Tea Tree Oil",2024,2,2,0
+"Tea Tree Oil",2025,1,2,-1
+"Vitamin C",2022,4,NULL,NULL
+"Vitamin C",2023,8,4,4
+"Vitamin C",2024,18,8,10
+"Vitamin C",2025,5,18,-13
+"Vitamin E",2023,1,NULL,NULL
+"Vitamin E",2024,1,1,0
+"Zinc PCA",2022,1,NULL,NULL
+"Zinc PCA",2023,1,1,0
+"Zinc PCA",2024,2,1,1

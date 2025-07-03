@@ -1,0 +1,21 @@
+user_id,name,year,unique_ingredients_used
+1,"Ananya Iyer",2025,6
+1,"Ananya Iyer",2024,8
+1,"Ananya Iyer",2023,9
+1,"Ananya Iyer",2022,7
+2,"Léa Dupont",2025,7
+2,"Léa Dupont",2024,11
+2,"Léa Dupont",2023,9
+2,"Léa Dupont",2022,7
+3,"Arjun Mehta",2025,9
+3,"Arjun Mehta",2024,12
+3,"Arjun Mehta",2023,9
+3,"Arjun Mehta",2022,8
+4,"Émile Bernard",2025,8
+4,"Émile Bernard",2024,11
+4,"Émile Bernard",2023,8
+4,"Émile Bernard",2022,6
+5,"Priya Sharma",2025,6
+5,"Priya Sharma",2024,9
+5,"Priya Sharma",2023,8
+5,"Priya Sharma",2022,7

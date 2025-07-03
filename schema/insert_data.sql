@@ -258,7 +258,7 @@ INSERT INTO orders (order_id, user_id, order_date) VALUES
 
 select * from products;
 
--- Order Items for Orders from 2022
+-- 🛍️ Order Items for Orders from 2022
 INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (16, 3, 1),   -- Niacinamide + Zinc
 (16, 7, 1),   -- Hyaluronic Moisturizer
@@ -276,7 +276,7 @@ INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (20, 10, 1),  -- Vitamin C Serum
 (20, 11, 1);  -- Snail Essence
 
--- Order Items for Orders from 2023
+-- 🛍️ Order Items for Orders from 2023
 INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (21, 27, 1),  -- Lifting Serum
 (21, 8, 1),   -- Oil-Free Acne Wash
@@ -294,7 +294,7 @@ INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (25, 32, 1),  -- Vitamin E + Retinol Oil
 (25, 20, 1);  -- Avocado Sheet Mask
 
--- Order Items for Orders from 2025
+-- 🛍️ Order Items for Orders from 2025
 INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (26, 2, 1),   -- Vitamin C Glow Serum
 (26, 9, 1),   -- UV Clear Sunscreen
@@ -314,6 +314,230 @@ INSERT INTO order_items (order_id, product_id, quantity) VALUES
 
 select * from order_items;
 
+-- 🗓️ Orders from 2022 (IDs 31–40)
+INSERT INTO orders (order_id, user_id, order_date) VALUES
+(31, 1, '2022-01-10'),
+(32, 2, '2022-02-14'),
+(33, 3, '2022-03-21'),
+(34, 4, '2022-04-28'),
+(35, 5, '2022-06-05'),
+(36, 1, '2022-07-11'),
+(37, 2, '2022-08-18'),
+(38, 3, '2022-09-24'),
+(39, 4, '2022-10-30'),
+(40, 5, '2022-12-06');
+
+-- 🗓️ Orders from 2023 (IDs 41–55)
+INSERT INTO orders (order_id, user_id, order_date) VALUES
+(41, 1, '2023-01-08'),
+(42, 2, '2023-02-15'),
+(43, 3, '2023-03-22'),
+(44, 4, '2023-04-28'),
+(45, 5, '2023-05-05'),
+(46, 1, '2023-06-12'),
+(47, 2, '2023-07-19'),
+(48, 3, '2023-08-25'),
+(49, 4, '2023-09-30'),
+(50, 5, '2023-10-15'),
+(51, 1, '2023-11-21'),
+(52, 2, '2023-12-27'),
+(53, 3, '2023-03-03'),
+(54, 4, '2023-06-17'),
+(55, 5, '2023-08-01');
+
+-- 🗓️ Orders from 2024 (IDs 56–70)
+INSERT INTO orders (order_id, user_id, order_date) VALUES
+(56, 1, '2024-01-10'),
+(57, 2, '2024-02-14'),
+(58, 3, '2024-03-18'),
+(59, 4, '2024-04-22'),
+(60, 5, '2024-05-26'),
+(61, 1, '2024-06-30'),
+(62, 2, '2024-07-04'),
+(63, 3, '2024-08-08'),
+(64, 4, '2024-09-12'),
+(65, 5, '2024-10-16'),
+(66, 1, '2024-11-20'),
+(67, 2, '2024-12-24'),
+(68, 3, '2024-03-03'),
+(69, 4, '2024-06-17'),
+(70, 5, '2024-08-01');
+
+select * from orders;
 
 
+
+
+-- 🛍️ Order Items for Orders 31–40 (2022)
+INSERT INTO order_items (order_id, product_id, quantity) VALUES
+(31, 21, 1),  -- Retinol Youth Renewal Serum
+(31, 6, 1),   -- Rice Cleanser
+
+(32, 10, 1),  -- Brightening Vitamin C Serum (Vit C in 2022)
+
+(33, 5, 1),   -- AHA/BHA Peeling Solution
+(33, 13, 1),  -- 6 Peptide Serum
+
+(34, 21, 1),  -- Retinol again
+(34, 2, 1),   -- Vitamin C Glow Serum
+
+(35, 16, 1),  -- Aloe Sheet Mask
+(35, 20, 1),  -- Avocado Mask
+
+(36, 12, 1),  -- Rice Toner
+(36, 18, 1),  -- Rice Sheet Mask
+
+(37, 22, 1),  -- Collagen Cream
+(37, 25, 1),  -- Bakuchiol Oil
+
+(38, 9, 1),   -- UV Sunscreen
+(38, 4, 1),   -- Gentle Skin Cleanser
+
+(39, 1, 1),   -- Hydrating Cleanser
+(39, 11, 1),  -- Snail Essence
+
+(40, 7, 1),   -- Hyaluronic Moisturizer
+(40, 13, 1);  -- 6 Peptide Serum
+
+
+-- 🛍️ Order Items for Orders 41–55 (2023)
+INSERT INTO order_items (order_id, product_id, quantity) VALUES
+(41, 2, 1),   -- Vitamin C Glow Serum
+(41, 28, 1),  -- Snail Repair Ampoule
+
+(42, 10, 1),  -- Brightening Vitamin C Serum
+(42, 20, 1),  -- Avocado Mask (TONYMOLY)
+
+(43, 11, 1),  -- Snail Essence
+(43, 19, 1),  -- Red Wine Mask (TONYMOLY)
+
+(44, 29, 1),  -- Laneige Sleeping Pack
+(44, 34, 1),  -- Peptide Toner
+
+(45, 17, 1),  -- Green Tea Sheet Mask (TONYMOLY)
+(45, 25, 1),  -- Bakuchiol Oil
+
+(46, 2, 1),   -- Vitamin C Glow Serum
+(46, 28, 1),  -- Snail Repair Ampoule
+
+(47, 10, 1),  -- Brightening Vitamin C Serum
+(47, 16, 1),  -- Aloe Mask
+
+(48, 27, 1),  -- Lifting Peptide Serum
+(48, 18, 1),  -- Rice Mask
+
+(49, 3, 1),   -- Niacinamide + Zinc
+(49, 15, 1),  -- Tea Tree Gel Cleanser
+
+(50, 13, 1),  -- 6 Peptide Serum
+(50, 33, 1),  -- Retinol Glow Serum
+
+(51, 19, 1),  -- Red Wine Mask
+(51, 11, 1),  -- Snail Essence
+
+(52, 30, 1),  -- Age Rewind Peptide Cream
+(52, 26, 1),  -- Q10 Cream
+
+(53, 31, 1),  -- Peptide Night Serum
+(53, 17, 1),  -- Green Tea Mask
+
+(54, 21, 1),  -- Retinol Youth Serum
+(54, 7, 1),   -- Hyaluronic Moisturizer
+
+(55, 10, 1),  -- Brightening Vitamin C Serum (last Vit C in 2023)
+(55, 14, 1);  -- Green Tea Emulsion
+
+-- 🛍️ Order Items for Orders 56–70 (2024)
+INSERT INTO order_items (order_id, product_id, quantity) VALUES
+(56, 2, 1),   -- Vitamin C Glow Serum
+(56, 30, 1),  -- Age Rewind Peptide Cream
+
+(57, 10, 1),  -- Brightening Vitamin C Serum
+(57, 34, 1),  -- Peptide Toner
+
+(58, 2, 1),   -- Vitamin C Glow Serum
+(58, 21, 1),  -- Retinol Youth Renewal Serum (rare in 2024)
+
+(59, 2, 1),   -- Vitamin C Glow Serum
+(59, 33, 1),  -- Retinol Glow Serum
+
+(60, 10, 1),  -- Brightening Vitamin C Serum
+(60, 16, 1),  -- Aloe Mask
+
+(61, 2, 1),   -- Vitamin C Glow Serum
+(61, 28, 1),  -- Snail Repair Ampoule
+
+(62, 10, 1),  -- Brightening Vitamin C Serum
+(62, 31, 1),  -- Peptide Night Serum
+
+(63, 2, 1),   -- Vitamin C Glow Serum (6th appearance in 2024)
+(63, 11, 1),  -- Snail Essence (light taper)
+
+(64, 13, 1),  -- 6 Peptide Serum
+(64, 35, 1),  -- Eye Cream (Peptides)
+
+(65, 30, 1),  -- Peptide Moisturizer
+(65, 12, 1),  -- Rice Toner
+
+(66, 27, 1),  -- Lifting Serum (Peptides)
+(66, 20, 1),  -- Avocado Mask
+
+(67, 32, 1),  -- Retinol Oil
+(67, 23, 1),  -- Peptide Eye Serum
+
+(68, 2, 1),   -- Vitamin C Glow Serum (7th appearance)
+(68, 26, 1),  -- Q10 Cream
+
+(69, 33, 1),  -- Retinol Glow Serum (final retinol order)
+(69, 17, 1),  -- Green Tea Mask
+
+(70, 13, 1),  -- 6 Peptide Serum
+(70, 10, 1);  -- Brightening Vitamin C Serum (8th appearance)
+
+
+
+-- 🗓️ Additional Orders for 2025 to improve signal and push Sheet Masks
+INSERT INTO orders (order_id, user_id, order_date) VALUES
+(71, 1, '2025-01-15'),
+(72, 2, '2025-02-20'),
+(73, 3, '2025-03-25'),
+(74, 4, '2025-04-30'),
+(75, 5, '2025-06-05'),
+(76, 1, '2025-07-10'),
+(77, 2, '2025-08-15'),
+(78, 3, '2025-09-20'),
+(79, 4, '2025-10-25'),
+(80, 5, '2025-12-01');
+
+-- 🛍️ Order Items for Orders 71–80 (2025)
+INSERT INTO order_items (order_id, product_id, quantity) VALUES
+(71, 17, 1),  -- Green Tea Sheet Mask
+(71, 13, 1),  -- 6 Peptide Serum
+
+(72, 17, 1),  -- Green Tea Sheet Mask
+(72, 2, 1),   -- Vitamin C Glow Serum
+
+(73, 17, 1),  -- Green Tea Sheet Mask
+(73, 20, 1),  -- Avocado Mask
+
+(74, 17, 1),  -- Green Tea Sheet Mask
+(74, 10, 1),  -- Brightening Vitamin C Serum
+
+(75, 17, 1),  -- Green Tea Sheet Mask
+(75, 16, 1),  -- Aloe Mask
+
+(76, 17, 1),  -- Green Tea Sheet Mask (6th time!)
+(76, 4, 1),   -- Gentle Skin Cleanser
+
+(77, 16, 1),  -- Aloe Sheet Mask
+(77, 18, 1),  -- Rice Sheet Mask
+
+(78, 19, 1),  -- Red Wine Mask
+(78, 26, 1),  -- Q10 Cream
+
+(79, 20, 1),  -- Avocado Sheet Mask
+(79, 30, 1),  -- Peptide Moisturizer
+
+(80, 18, 1),  -- Rice Sheet Mask
+(80, 33, 1);  -- Retinol Glow Serum
 
